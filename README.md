@@ -18,4 +18,4 @@ accurately assess student submissions.
 
 ## Demo Video
 This is the demo video of the AI working
-https://drive.google.com/file/d/1w_Ttst13Crq-pSe5roLWWqT7e8cjjYx_/view?usp=drive_link
+[https://drive.google.com/file/d/1w_Ttst13Crq-pSe5roLWWqT7e8cjjYx_/view?usp=drive_link](https://drive.google.com/file/d/1w_Ttst13Crq-pSe5roLWWqT7e8cjjYx_/view?usp=sharing)
