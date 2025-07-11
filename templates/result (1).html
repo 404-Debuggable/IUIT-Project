@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6f0ff, #cce0f5, #b3d1f0, #f7f9fc);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 80px auto;
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .title {
+            color: #002366;
+            margin-bottom: 20px;
+        }
+
+        h2, h3 {
+            margin: 10px 0;
+        }
+
+        .score {
+            font-size: 32px;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                margin: 40px 20px;
+                padding: 25px 20px;
+            }
+
+            .score {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Quiz Result</h2>
+            <h3>Roll No: {{ roll }}</h3>
+            <h3>Subject: {{ subject }}</h3>
+        </div>
+
+        <div class="score">Your Score: {{ score }} / {{ total }}</div>
+
+        <a href="/" class="back-btn">Try Another Quiz</a>
+    </div>
+</body>
+</html>

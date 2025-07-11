@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6f0ff, #cce0f5, #b3d1f0, #f7f9fc);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 30px 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #002366;
+        }
+
+        h2, h3, h4 {
+            margin: 10px 0;
+        }
+
+        .question-block {
+            margin-bottom: 20px;
+        }
+
+        .question-block p {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-check {
+            margin-left: 15px;
+            margin-bottom: 6px;
+        }
+
+        label {
+            font-weight: normal;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: vertical;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 6px;
+            accent-color: #007bff;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                margin: 40px 20px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Quiz</h2>
+            <h3>Roll No: {{ roll }}</h3>
+            <h4>Subject: {{ subject }}</h4>
+        </div>
+
+        <form action="/submit" method="post">
+            <input type="hidden" name="roll" value="{{ roll }}">
+            <input type="hidden" name="subject" value="{{ subject }}">
+
+            
+
+            <h4>Short Answer Questions</h4>
+            {% for q in shorts %}
+                <div class="question-block">
+                    <p>{{ loop.index }}. {{ q }}</p>
+                    <textarea name="short{{ loop.index0 }}" required></textarea>
+                </div>
+            {% endfor %}
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

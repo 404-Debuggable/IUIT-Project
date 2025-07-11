@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz login page</title>
+    <style>
+	/* Basic reset and background setup */
+        body {
+            margin: 0;
+            padding: 0;
+	    min-height: 110vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #e6f0ff, #cce0f5, #b3d1f0, #f7f9fc);
+        }
+
+	/* Main wrapper for the form */
+        .form {
+	    margin: 80px auto;
+	    padding: 30px 25px;
+            max-width: 550px;
+            border-radius:50px;
+            box-sizing: border-box;
+	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;            
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #002366;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #002366;
+        }
+
+	/* Inputs and dropdowns */
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+	/* Submit button */
+        input[type="submit"] {
+	    align: center;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+	/* Hover effect */
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+	/* Mobile responsive adjustments */
+        @media (max-width: 500px) {
+            .container {
+                margin: 40px 20px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="title">
+            <h2>Quiz Login</h2>
+        </div>
+        <form action="/quiz" method="post">
+            <info for="roll">Roll No:</label>
+            <input type="text" id="roll" name="roll" required>
+
+            <info for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="English">English</option>
+                <option value="Manufacturing">Manufacturing</option>
+            </select>
+
+            <input type="submit" value="Start Quiz">
+        </form>
+    </div>
+</body>
+</html>
